@@ -32,8 +32,7 @@ class Solution {
         bracketLookup.put('}', '{');
         bracketLookup.put(']', '[');
 
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
+       for (char c : s.toCharArray()){
             if (bracketLookup.containsKey(c)) {
                 if (!brackets.isEmpty() && bracketLookup.get(c).equals(brackets.peek())) {
                     brackets.pop();
